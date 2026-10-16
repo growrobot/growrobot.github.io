@@ -255,10 +255,12 @@ footer .wrap{align-items:center}
 footer{border-top:1px solid var(--line);padding-block:28px 40px;color:var(--muted);font-size:13.5px}
 footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}
 footer .brand{font-size:20px}
-footer .ft-id{flex:1 1 300px;min-width:0}
-footer .ft-meta{margin:8px 0 0;line-height:1.6}
-footer .ft-kist{display:block;line-height:0}
-footer .ft-kist img{height:44px;width:auto}
+footer .ft-r{display:flex;align-items:center;gap:18px;flex-wrap:wrap;min-width:0}
+footer .ft-meta{line-height:1.6}
+footer .nw{white-space:nowrap}
+footer .ft-kist{display:block;line-height:0;padding-left:18px;border-left:1.5px solid var(--line)}
+footer .ft-kist img{height:34px;width:auto}
+@media (max-width:640px){footer .ft-kist{padding-left:0;border-left:0}}
 footer .ft-kist .kd{display:none}
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]) footer .ft-kist .kl{display:none}:root:not([data-theme="light"]) footer .ft-kist .kd{display:block}}
 :root[data-theme="dark"] footer .ft-kist .kl{display:none}
@@ -596,11 +598,11 @@ footer .ft-kist .kd{display:none}
 
 <footer>
   <div class="wrap">
-    <div class="ft-id">
-      <a class="brand" href="#top"><svg viewBox="0 0 120 120" aria-hidden="true"><g fill="currentColor"><rect x="42" y="6" width="36" height="30" rx="10"/><rect x="40" y="42" width="40" height="40" rx="11"/><rect x="22" y="44" width="12" height="34" rx="6"/><rect x="86" y="44" width="12" height="34" rx="6"/><rect x="43" y="87" width="14" height="27" rx="6"/><rect x="63" y="87" width="14" height="27" rx="6"/></g><rect x="50" y="17" width="20" height="6" rx="3" style="fill:var(--bg)"/></svg><span><span class="w">GROW</span><span class="lab">Lab</span></span></a>
-      <p class="ft-meta">General-purpose Robots for the Open World · AI Robot Institute, KIST<br>© 2026 <b class="gname">GROW</b> Lab</p>
+    <a class="brand" href="#top"><svg viewBox="0 0 120 120" aria-hidden="true"><g fill="currentColor"><rect x="42" y="6" width="36" height="30" rx="10"/><rect x="40" y="42" width="40" height="40" rx="11"/><rect x="22" y="44" width="12" height="34" rx="6"/><rect x="86" y="44" width="12" height="34" rx="6"/><rect x="43" y="87" width="14" height="27" rx="6"/><rect x="63" y="87" width="14" height="27" rx="6"/></g><rect x="50" y="17" width="20" height="6" rx="3" style="fill:var(--bg)"/></svg><span><span class="w">GROW</span><span class="lab">Lab</span></span></a>
+    <div class="ft-r">
+      <span class="ft-meta">General-purpose Robots for the Open World · <span class="nw">AI Robot Institute, KIST</span> · <span class="nw">© 2026 <b class="gname">GROW</b> Lab</span></span>
+      <a class="ft-kist" href="https://kist.re.kr/eng/index.do" aria-label="Korea Institute of Science and Technology"><img class="kl" src="media/kist-logo.png" alt="KIST" width="202" height="48"><img class="kd" src="media/kist-logo-dark.png" alt="" width="202" height="48"></a>
     </div>
-    <a class="ft-kist" href="https://kist.re.kr/eng/index.do" aria-label="Korea Institute of Science and Technology"><img class="kl" src="media/kist-logo.png" alt="KIST" width="202" height="48"><img class="kd" src="media/kist-logo-dark.png" alt="" width="202" height="48"></a>
   </div>
 </footer>
 
