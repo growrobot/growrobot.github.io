@@ -13,6 +13,7 @@
 <meta name="theme-color" content="#0B2545">
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20120%20120%22%3E%3Cg%20fill%3D%22%232F6BFF%22%3E%3Crect%20x%3D%2242%22%20y%3D%226%22%20width%3D%2236%22%20height%3D%2230%22%20rx%3D%2210%22/%3E%3Crect%20x%3D%2240%22%20y%3D%2242%22%20width%3D%2240%22%20height%3D%2240%22%20rx%3D%2211%22/%3E%3Crect%20x%3D%2222%22%20y%3D%2244%22%20width%3D%2212%22%20height%3D%2234%22%20rx%3D%226%22/%3E%3Crect%20x%3D%2286%22%20y%3D%2244%22%20width%3D%2212%22%20height%3D%2234%22%20rx%3D%226%22/%3E%3Crect%20x%3D%2243%22%20y%3D%2287%22%20width%3D%2214%22%20height%3D%2227%22%20rx%3D%226%22/%3E%3Crect%20x%3D%2263%22%20y%3D%2287%22%20width%3D%2214%22%20height%3D%2227%22%20rx%3D%226%22/%3E%3C/g%3E%3Crect%20x%3D%2250%22%20y%3D%2217%22%20width%3D%2220%22%20height%3D%226%22%20rx%3D%223%22%20fill%3D%22%23fff%22/%3E%3C/svg%3E">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<script>var l;try{l=localStorage.getItem("grow-lang")}catch(e){}document.documentElement.lang=l||((navigator.language||"").toLowerCase().indexOf("ko")===0?"ko":"en")</script>
 <style>
 :root{
   --bg:#FFFFFF; --surface:#FFFFFF; --fg:#14213D; --muted:#4B5A6E; --line:#D8DFE9;
@@ -266,6 +267,38 @@ footer .ft-kist .kd{display:none}
 :root[data-theme="dark"] footer .ft-kist .kl{display:none}
 :root[data-theme="dark"] footer .ft-kist .kd{display:block}
 @media (prefers-reduced-motion:no-preference){.hero h1{animation:rise .6s ease-out both}@keyframes rise{from{opacity:.001;transform:translateY(8px)}to{opacity:1;transform:none}}}
+
+html[lang="ko"] .en{display:none!important}
+html:not([lang="ko"]) .ko{display:none!important}
+html[lang="ko"] body{word-break:keep-all}
+html[lang="ko"] .thesis,html[lang="ko"] .join-lead{font-family:var(--sans);font-weight:500;letter-spacing:-.01em}
+.navr{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.langsw{display:inline-flex;border:1px solid var(--line);border-radius:999px;padding:2px;gap:2px}
+.langsw button{font:600 12.5px/1 var(--sans);border:0;background:none;color:var(--muted);padding:6px 10px;border-radius:999px;cursor:pointer}
+.langsw button[aria-pressed="true"]{background:var(--navy);color:var(--onnavy)}
+:root[data-theme="dark"] .areas{display:flex;flex-direction:column;gap:18px}
+.area{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:26px 26px 22px;display:grid;grid-template-columns:minmax(0,300px) minmax(0,1fr);gap:18px 34px}
+@media (max-width:820px){.area{grid-template-columns:1fr;padding:22px 20px}}
+.area .num{font-family:var(--mono);font-size:13px;color:var(--deep);letter-spacing:.06em;margin:0 0 6px}
+.area h3{font-family:var(--serif);font-weight:600;font-size:26px;line-height:1.15;margin:0 0 10px;color:var(--navy)}
+.area .q{margin:0 0 12px;color:var(--fg);font-size:16px}
+.area .kw{display:flex;flex-wrap:wrap;gap:6px;margin:0;padding:0;list-style:none}
+.area .kw li{font-size:13px;color:var(--navy);background:var(--tint);border-radius:999px;padding:3px 10px}
+.area .lbl{font-family:var(--sans);font-size:12.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--deep);margin:0 0 6px}
+.area .what{margin:0 0 16px;color:var(--muted);font-size:15.5px}
+.area .sel{display:flex;flex-wrap:wrap;gap:8px}
+.area .sel a{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);border-radius:8px;padding:6px 10px;font-size:14px;font-weight:600;color:var(--navy)}
+.area .sel a i{font-style:normal;font-weight:500;color:var(--muted);font-size:13px}
+.area .sel a:hover{text-decoration:none;border-color:var(--deep)}
+.fac{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+@media (max-width:820px){.fac{grid-template-columns:1fr}}
+.fac .box{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px}
+.fac h3{font-size:17px;margin:0 0 10px;color:var(--navy)}
+.fac ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:10px;font-size:15px;color:var(--muted)}
+.fac li b{display:block;color:var(--fg);font-weight:600}
+.tbd{border:1px dashed #C9A227;border-radius:6px;padding:0 6px;color:#8A6A00;background:rgba(255,214,102,.14);font-size:.92em}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .tbd{color:#F4DFA6}}
+:root[data-theme="dark"] .tbd{color:#F4DFA6}
 </style>
 </head>
 <body>
@@ -284,6 +317,7 @@ footer .ft-kist .kd{display:none}
 <nav>
   <div class="wrap">
     <div class="brandgrp"><a class="brand" href="#top"><svg viewBox="0 0 120 120" aria-hidden="true"><g fill="currentColor"><rect x="42" y="6" width="36" height="30" rx="10"/><rect x="40" y="42" width="40" height="40" rx="11"/><rect x="22" y="44" width="12" height="34" rx="6"/><rect x="86" y="44" width="12" height="34" rx="6"/><rect x="43" y="87" width="14" height="27" rx="6"/><rect x="63" y="87" width="14" height="27" rx="6"/></g><rect x="50" y="17" width="20" height="6" rx="3" style="fill:var(--bg)"/></svg><span><span class="w">GROW</span><span class="lab">Lab</span></span></a><span class="inst"><span class="inst-full">AI Robot Institute · </span>KIST</span></div>
+    <div class="navr">
     <ul>
       <li><a href="#research">Research</a></li>
       <li><a href="#publications">Publications</a></li>
@@ -291,17 +325,19 @@ footer .ft-kist .kd{display:none}
       <li><a href="#news">News</a></li>
       <li><a href="#join">Join</a></li>
     </ul>
+    <div class="langsw" role="group" aria-label="Language"><button type="button" data-l="en" aria-pressed="false">EN</button><button type="button" data-l="ko" aria-pressed="false">한국어</button></div>
+    </div>
   </div>
 </nav>
 
 <header class="hero" id="top">
   <div class="wrap">
-    <h1>People <em>grow</em>.<br>Why not robots?</h1>
-    <p class="thesis"><span>Robots that handle objects they have never seen,</span> <span>with bodies they have never used,</span> <span>and get better the more they are used.</span></p>
-    <p class="lead"><b class="gname">GROW</b> Lab builds <span class="acro"><b>G</b>eneral-purpose <b>R</b>obots for the <b>O</b>pen <b>W</b>orld</span>.<br>We study how robots perceive, act and keep learning in the real world, <span class="lb">from grippers and dexterous hands to humanoids.</span></p>
+    <h1 class="en">People <em>grow</em>.<br>Why not robots?</h1><h1 class="ko">사람은 <em>성장</em>합니다.<br>로봇은 왜 안 될까요?</h1>
+    <p class="thesis en"><span>Robots that handle objects they have never seen,</span> <span>with bodies they have never used,</span> <span>and get better the more they are used.</span></p><p class="thesis ko"><span>처음 보는 물체를 다루고,</span> <span>처음 써 보는 몸으로 움직이며,</span> <span>쓸수록 더 나아지는 로봇.</span></p>
+    <p class="lead en"><b class="gname">GROW</b> Lab builds <span class="acro"><b>G</b>eneral-purpose <b>R</b>obots for the <b>O</b>pen <b>W</b>orld</span>.<br>We study how robots perceive, act and keep learning in the real world, <span class="lb">from grippers and dexterous hands to humanoids.</span></p><p class="lead ko"><b class="gname">GROW</b> Lab은 <span class="acro"><b>G</b>eneral-purpose <b>R</b>obots for the <b>O</b>pen <b>W</b>orld</span>를 만듭니다.<br>로봇이 real world에서 인식하고, 행동하고, 계속 배우는 방법을 연구합니다. <span class="lb">Gripper와 dexterous hand부터 humanoid까지.</span></p>
     <div class="cta">
-      <a class="btn primary" href="#join">Join the lab</a>
-      <a class="btn" href="#research">Research questions</a>
+      <a class="btn primary" href="#join"><span class="en">Join the lab</span><span class="ko">연구실 지원하기</span></a>
+      <a class="btn" href="#research"><span class="en">Research questions</span><span class="ko">연구 질문 보기</span></a>
     </div>
     <figure class="seq">
       <svg viewBox="0 30 1000 200" width="100%" style="max-width:100%;height:auto" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Four embodiments growing: a gripper, an arm, a dexterous hand, and a humanoid, each holding a different object">
@@ -386,62 +422,74 @@ footer .ft-kist .kd{display:none}
 </g>
 </svg>
 
-      <div class="labels"><span><b>Gripper</b>new objects</span><span><b>Arm</b>new scenes</span><span><b>Dexterous hand</b>new bodies</span><span><b>Humanoid</b>keeps learning</span></div>
+      <div class="labels en"><span><b>Gripper</b>new objects</span><span><b>Arm</b>new scenes</span><span><b>Dexterous hand</b>new bodies</span><span><b>Humanoid</b>keeps learning</span></div><div class="labels ko"><span><b>Gripper</b>새로운 물체</span><span><b>Arm</b>새로운 장면</span><span><b>Dexterous hand</b>새로운 몸</span><span><b>Humanoid</b>계속 배우기</span></div>
     </figure>
   </div>
 </header>
 
 <section id="research">
   <div class="wrap">
-    <div class="eyebrow">Research questions</div>
-    <h2>Why aren't robots in our homes yet?</h2>
-    <p class="sub wide">Because the real world keeps changing: new objects, new robot bodies, and everything after deployment. We ask one question for each.</p>
-    <div class="pillars">
-      <article class="pillar" id="open-world">
-        <h3>Open-World Manipulation</h3>
-        <p class="q">Can a robot handle an object it has never seen, with no CAD model?</p>
-        <ul>
-          <li>Model-free 6D pose and scale</li>
-          <li>Novel and fast-moving objects</li>
-          <li>Skills from one demonstration</li>
-        </ul>
-        <p class="work"><span>Related:</span> Any6D, Event6D, GraspClutter6D</p>
+    <div class="eyebrow"><span class="en">Research questions</span><span class="ko">연구 질문</span></div>
+    <h2 class="en">Why aren't robots in our homes yet?</h2><h2 class="ko">로봇은 왜 아직 우리 집에 없을까요?</h2>
+    <p class="sub wide en">Because the real world keeps changing: new objects, new robot bodies, and everything after deployment. We ask one question for each.</p><p class="sub wide ko">Real world는 계속 바뀌기 때문입니다. 새로운 물체, 새로운 로봇의 몸, 그리고 배포 이후의 모든 변화. 각각에 하나씩 질문을 던집니다.</p>
+    <div class="areas">
+      <article class="area" id="open-world">
+        <div>
+          <p class="num">01</p>
+          <h3>Open-World Manipulation</h3>
+          <p class="q en">Can a robot handle an object it has never seen, with no CAD model?</p><p class="q ko">CAD model 없이, 처음 보는 물체를 로봇이 다룰 수 있을까?</p>
+          <ul class="kw en"><li>Model-free 6D pose and scale</li><li>Novel and fast-moving objects</li><li>Skills from one demonstration</li></ul><ul class="kw ko"><li>Model-free 6D pose·scale 추정</li><li>Novel object와 빠르게 움직이는 물체</li><li>One demonstration으로 배우는 skill</li></ul>
+        </div>
+        <div>
+          <p class="lbl"><span class="en">What we do</span><span class="ko">무엇을 하나</span></p>
+          <p class="what en">Robots in homes and labs meet objects that no one modeled in advance. We estimate the 6D pose and size of a new object from a single RGB-D view, keep tracking it even when it moves fast, and turn one human demonstration into a reusable skill, so the robot can work with whatever is in front of it.</p><p class="what ko">집과 실험실의 로봇은 미리 모델링되지 않은 물체를 만납니다. 저희는 RGB-D 한 장면에서 novel object의 6D pose와 크기를 추정하고, 빠르게 움직여도 놓치지 않고 tracking하며, 한 번의 demonstration을 다시 쓸 수 있는 skill로 바꿉니다. 로봇이 눈앞의 어떤 물체와도 일할 수 있도록.</p>
+          <p class="lbl"><span class="en">Selected papers</span><span class="ko">대표 논문</span></p>
+          <div class="sel"><a href="https://taeyeop.com/any6d">Any6D <i>CVPR 2025</i></a><a href="https://chohoonhee.github.io/Event6D/">Event6D <i>CVPR 2026</i></a><a href="https://sites.google.com/view/graspclutter6d">GraspClutter6D <i>RA-L 2025</i></a><a href="https://sites.google.com/view/DeLTa25/">DeLTa <i>Preprint 2026</i></a></div>
+        </div>
       </article>
-      <article class="pillar" id="cross-embodiment">
-        <h3>Cross-Embodiment</h3>
-        <p class="q">Can the same skill run on a new gripper, hand or camera without retraining?</p>
-        <ul>
-          <li>One grasp model, many grippers</li>
-          <li>Markerless hand-eye calibration</li>
-          <li>Viewpoint-robust VLA policies</li>
-        </ul>
-        <p class="work"><span>Related:</span> XGrasp, GraspGraphNet</p>
+      <article class="area" id="cross-embodiment">
+        <div>
+          <p class="num">02</p>
+          <h3>Cross-Embodiment</h3>
+          <p class="q en">Can the same skill run on a new gripper, hand or camera without retraining?</p><p class="q ko">새로운 gripper, hand, camera에서도 재학습 없이 같은 skill이 동작할까?</p>
+          <ul class="kw en"><li>One grasp model, many grippers</li><li>Markerless hand-eye calibration</li><li>Viewpoint-robust VLA policies</li></ul><ul class="kw ko"><li>하나의 grasp model, 여러 gripper</li><li>Markerless hand-eye calibration</li><li>Viewpoint에 강인한 VLA policy</li></ul>
+        </div>
+        <div>
+          <p class="lbl"><span class="en">What we do</span><span class="ko">무엇을 하나</span></p>
+          <p class="what en">Every new gripper, hand or camera usually means collecting data and training again. We build models that take the robot body itself as an input, so one grasp model runs on many grippers and one policy holds up under a new viewpoint.</p><p class="what ko">새로운 gripper, hand, camera가 생길 때마다 데이터를 다시 모으고 다시 학습하는 것이 보통입니다. 저희는 로봇의 몸 자체를 입력으로 받는 모델을 만들어, 하나의 grasp model이 여러 gripper에서 동작하고 하나의 policy가 새로운 viewpoint에서도 버티게 합니다.</p>
+          <p class="lbl"><span class="en">Selected papers</span><span class="ko">대표 논문</span></p>
+          <div class="sel"><a href="https://sites.google.com/view/xgrasp">XGrasp <i>Preprint 2026</i></a><a href="https://lysees.github.io/graspgraphnet-page/">GraspGraphNet <i>Preprint 2026</i></a></div>
+        </div>
       </article>
-      <article class="pillar" id="lifelong">
-        <h3>Lifelong Robot Learning</h3>
-        <p class="q">Can a deployed robot keep improving from its own successes and failures?</p>
-        <ul>
-          <li>Test-time and domain adaptation</li>
-          <li>Automatic 6D labeling of collected data</li>
-          <li>Failure detection and recovery</li>
-        </ul>
-        <p class="work"><span>Related:</span> TTA-COPE, UDA-COPE</p>
+      <article class="area" id="lifelong">
+        <div>
+          <p class="num">03</p>
+          <h3>Lifelong Robot Learning</h3>
+          <p class="q en">Can a deployed robot keep improving from its own successes and failures?</p><p class="q ko">배포된 로봇이 스스로의 성공과 실패로부터 계속 나아질 수 있을까?</p>
+          <ul class="kw en"><li>Test-time and domain adaptation</li><li>Automatic 6D labeling of collected data</li><li>Failure detection and recovery</li></ul><ul class="kw ko"><li>Test-time adaptation, domain adaptation</li><li>수집한 데이터의 자동 6D labeling</li><li>Failure detection과 recovery</li></ul>
+        </div>
+        <div>
+          <p class="lbl"><span class="en">What we do</span><span class="ko">무엇을 하나</span></p>
+          <p class="what en">A deployed robot sees far more data than any training set, yet most of it is thrown away. We let robots adapt at test time, label the data they collect automatically, and detect and recover from their failures, so that every try makes the next one better.</p><p class="what ko">배포된 로봇은 어떤 학습 데이터보다 많은 데이터를 보지만, 대부분은 버려집니다. 저희는 로봇이 test time에 적응하고, 스스로 모은 데이터에 자동으로 label을 달고, 실패를 감지해 회복하게 만듭니다. 매번의 시도가 다음 시도를 더 낫게 하도록.</p>
+          <p class="lbl"><span class="en">Selected papers</span><span class="ko">대표 논문</span></p>
+          <div class="sel"><a href="https://taeyeop.com/ttacope">TTA-COPE <i>CVPR 2023</i></a><a href="https://taeyeop.com/udacope">UDA-COPE <i>CVPR 2022</i></a></div>
+        </div>
       </article>
     </div>
     <div class="loopline" aria-label="How the three questions connect">
       <svg class="mascot" viewBox="56 30 160 160" aria-hidden="true"><use href="#m-hold"/></svg>
       <ol class="steps">
-        <li><small>Open-World</small>See anything</li>
-        <li><small>Cross-Embodiment</small>Act with any body</li>
-        <li><small>Lifelong</small>Learn from every try</li>
+        <li><small>Open-World</small><span class="en">See anything</span><span class="ko">무엇이든 보고</span></li>
+        <li><small>Cross-Embodiment</small><span class="en">Act with any body</span><span class="ko">어떤 몸으로든 행동하고</span></li>
+        <li><small>Lifelong</small><span class="en">Learn from every try</span><span class="ko">모든 시도에서 배웁니다</span></li>
       </ol>
-      <p class="loop-end"><b>↻</b>Repeat, and the robot grows.</p>
+      <p class="loop-end"><b>↻</b><span class="en">Repeat, and the robot grows.</span><span class="ko">반복할수록 로봇은 성장합니다.</span></p>
     </div>
-    <p class="lands-k">Where it lands</p>
+    <p class="lands-k"><span class="en">Where it lands</span><span class="ko">적용 분야</span></p>
     <ul class="lands" aria-label="Application domains">
-      <li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 11 12 4l8.5 7"/><path d="M5.5 9.5V20h13V9.5"/><path d="M10 20v-5.5h4V20"/></svg><div><b>Homes</b>Kitchens, chores and senior care</div></li>
-      <li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20h18"/><path d="M4 20V11l5 3v-3l5 3v-3l5 3v6"/><path d="M15 9V4h3v7"/></svg><div><b>Factories</b>Assembling unseen parts</div></li>
-      <li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M9.5 3h5"/><path d="M10.5 3v6.2L5 18.4A1.8 1.8 0 0 0 6.6 21h10.8a1.8 1.8 0 0 0 1.6-2.6L13.5 9.2V3"/><path d="M7.6 15h8.8"/></svg><div><b>Self-driving labs</b>Glassware, pouring and mixing</div></li>
+      <li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 11 12 4l8.5 7"/><path d="M5.5 9.5V20h13V9.5"/><path d="M10 20v-5.5h4V20"/></svg><div><b><span class="en">Homes</span><span class="ko">가정</span></b><span class="en">Kitchens, chores and senior care</span><span class="ko">주방, 집안일, 노인 돌봄</span></div></li>
+      <li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20h18"/><path d="M4 20V11l5 3v-3l5 3v-3l5 3v6"/><path d="M15 9V4h3v7"/></svg><div><b><span class="en">Factories</span><span class="ko">공장</span></b><span class="en">Assembling unseen parts</span><span class="ko">처음 보는 부품 조립</span></div></li>
+      <li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M9.5 3h5"/><path d="M10.5 3v6.2L5 18.4A1.8 1.8 0 0 0 6.6 21h10.8a1.8 1.8 0 0 0 1.6-2.6L13.5 9.2V3"/><path d="M7.6 15h8.8"/></svg><div><b>Self-driving labs</b><span class="en">Glassware, pouring and mixing</span><span class="ko">유리기구 다루기, 붓기, 섞기</span></div></li>
     </ul>
   </div>
 </section>
@@ -449,41 +497,41 @@ footer .ft-kist .kd{display:none}
 <section id="demos">
   <div class="wrap">
     <div class="eyebrow">Research Highlights</div>
-    <h2>Robots meet the real world</h2>
-    <p class="sub">Novel objects, clutter, fast motion, new grippers and hands, on real robots.</p>
+    <h2 class="en">Robots meet the real world</h2><h2 class="ko">Real world에서 만나는 로봇</h2>
+    <p class="sub en">Novel objects, clutter, fast motion, new grippers and hands, on real robots.</p><p class="sub ko">Novel object, clutter, 빠른 움직임, 새로운 gripper와 hand. 모두 실제 로봇에서.</p>
     <div class="demos">
       <figure class="demo" style="margin:0">
         <div class="vid"><video src="media/any6d.mp4" poster="media/any6d.jpg" muted loop playsinline autoplay preload="metadata" aria-label="Grasping novel objects with Any6D"></video></div>
-        <figcaption class="cap"><span class="pill">Any6D · CVPR 2025</span><b>Grasping novel objects with Any6D</b><span>One RGB-D anchor frame, no CAD model, pose and size fed straight to the grasp planner.</span></figcaption>
+        <figcaption class="cap"><span class="pill">Any6D · CVPR 2025</span><b class="en">Grasping novel objects with Any6D</b><b class="ko">Any6D로 처음 보는 물체 잡기</b><span class="en">One RGB-D anchor frame, no CAD model, pose and size fed straight to the grasp planner.</span><span class="ko">RGB-D anchor frame 한 장, CAD model 없이. Pose와 크기를 바로 grasp planner로 넘깁니다.</span></figcaption>
       </figure>
       <figure class="demo" style="margin:0">
         <div class="vid"><video data-rate="4" src="media/event6d.mp4" poster="media/event6d.jpg" muted loop playsinline autoplay preload="metadata" aria-label="Fast-moving object tracked with an event camera"></video></div>
-        <figcaption class="cap"><span class="pill">Event6D · CVPR 2026</span><b>Fast-moving object tracked with an event camera</b><span>Pose keeps up where frame cameras blur.</span></figcaption>
+        <figcaption class="cap"><span class="pill">Event6D · CVPR 2026</span><b class="en">Fast-moving object tracked with an event camera</b><b class="ko">Event camera로 빠른 물체 tracking</b><span class="en">Pose keeps up where frame cameras blur.</span><span class="ko">Frame camera가 흐려지는 순간에도 pose를 놓치지 않습니다.</span></figcaption>
       </figure>
       <figure class="demo" style="margin:0">
         <div class="vid"><video src="media/autolabel.mp4" poster="media/autolabel.jpg" muted loop playsinline autoplay preload="metadata" aria-label="Category-level 6D pose adapting at test time"></video></div>
-        <figcaption class="cap"><span class="pill">TTA-COPE · CVPR 2023</span><b>6D pose that adapts to a new scene</b><span>Category-level pose keeps improving at test time, with no labels from the new scene.</span></figcaption>
+        <figcaption class="cap"><span class="pill">TTA-COPE · CVPR 2023</span><b class="en">6D pose that adapts to a new scene</b><b class="ko">새로운 장면에 적응하는 6D pose</b><span class="en">Category-level pose keeps improving at test time, with no labels from the new scene.</span><span class="ko">새 장면의 label 없이, test time에 category-level pose가 계속 좋아집니다.</span></figcaption>
       </figure>
       <figure class="demo r2" style="margin:0">
         <div class="vid"><video src="media/graspclutter6d.mp4" poster="media/graspclutter6d.jpg" muted loop playsinline autoplay preload="metadata" aria-label="Grasping diverse objects from a cluttered bin"></video></div>
-        <figcaption class="cap"><span class="pill">GraspClutter6D · RA-L 2025</span><b>Grasping in clutter</b><span>Picks diverse objects one by one from a cluttered bin into an empty box.</span></figcaption>
+        <figcaption class="cap"><span class="pill">GraspClutter6D · RA-L 2025</span><b class="en">Grasping in clutter</b><b class="ko">Clutter 속 grasping</b><span class="en">Picks diverse objects one by one from a cluttered bin into an empty box.</span><span class="ko">복잡하게 쌓인 bin에서 다양한 물체를 하나씩 집어 빈 상자로 옮깁니다.</span></figcaption>
       </figure>
       <figure class="demo r2" style="margin:0">
         <div class="vid"><video src="media/dynamicvla.mp4" poster="media/dynamicvla.jpg" muted loop playsinline autoplay preload="metadata" aria-label="VLA for dynamic objects: a Franka arm chases and grasps a rolling tennis ball"></video></div>
-        <figcaption class="cap"><span class="pill">Ongoing</span><b>VLA for dynamic objects</b><span>Our ongoing vision-language-action project for dynamic manipulation.</span></figcaption>
+        <figcaption class="cap"><span class="pill">Ongoing</span><b class="en">VLA for dynamic objects</b><b class="ko">Dynamic object를 위한 VLA</b><span class="en">Our ongoing vision-language-action project for dynamic manipulation.</span><span class="ko">Dynamic manipulation을 위해 진행 중인 vision-language-action 프로젝트입니다.</span></figcaption>
       </figure>
       <figure class="demo r2" style="margin:0">
         <div class="vid"><video src="media/delta-mix.mp4" poster="media/delta-mix.jpg" muted loop playsinline autoplay preload="metadata" aria-label="Color mixing: the robot pours yellow and blue liquid into a cylinder to make green"></video></div>
-        <figcaption class="cap"><span class="pill">DeLTa</span><b>Make green liquid in the cylinder</b><span>Pours yellow and blue from novel transparent bottles, guided by one demonstration.</span></figcaption>
+        <figcaption class="cap"><span class="pill">DeLTa</span><b class="en">Make green liquid in the cylinder</b><b class="ko">실린더에 초록색 액체 만들기</b><span class="en">Pours yellow and blue from novel transparent bottles, guided by one demonstration.</span><span class="ko">처음 보는 투명한 병에서 노란색과 파란색을 붓습니다. Demonstration 한 번이면 됩니다.</span></figcaption>
       </figure>
       <div class="demo-pair">
         <figure class="demo pair" style="margin:0">
           <div class="vid"><video src="media/xgrasp-real3.mp4" poster="media/xgrasp-real3.jpg" muted loop playsinline autoplay preload="metadata" aria-label="One grasp model running on different grippers on a real ABB YuMi robot"></video></div>
-          <figcaption class="cap"><span class="pill">XGrasp</span><b>One grasp model, many grippers</b><span>Swap the gripper, keep the model. Same weights, no retraining.</span></figcaption>
+          <figcaption class="cap"><span class="pill">XGrasp</span><b class="en">One grasp model, many grippers</b><b class="ko">하나의 grasp model, 여러 gripper</b><span class="en">Swap the gripper, keep the model. Same weights, no retraining.</span><span class="ko">Gripper를 바꿔도 model은 그대로. 같은 weight, 재학습 없이.</span></figcaption>
         </figure>
         <figure class="demo pair" style="margin:0">
           <div class="vid"><video src="media/graspgraphnet.mp4" poster="media/graspgraphnet.jpg" muted loop playsinline autoplay preload="metadata" aria-label="A multi-fingered hand on a real arm grasping a plush toy, a cup and a watering can"></video></div>
-          <figcaption class="cap"><span class="pill">GraspGraphNet</span><b>Dexterous grasps on a real hand</b><span>Graph-structured grasps for multi-fingered hands, on objects of any shape.</span></figcaption>
+          <figcaption class="cap"><span class="pill">GraspGraphNet</span><b class="en">Dexterous grasps on a real hand</b><b class="ko">실제 로봇 손의 dexterous grasp</b><span class="en">Graph-structured grasps for multi-fingered hands, on objects of any shape.</span><span class="ko">Multi-fingered hand를 위한 graph 구조의 grasp. 어떤 모양의 물체든.</span></figcaption>
         </figure>
       </div>
     </div>
@@ -493,7 +541,7 @@ footer .ft-kist .kd{display:none}
 <section id="publications">
   <div class="wrap">
     <h2>Publications</h2>
-    <p class="sub">* equal contribution, † corresponding. Full list on <a href="https://taeyeop.com">taeyeop.com</a> and <a href="https://scholar.google.com/citations?user=wwGGcd0AAAAJ&amp;hl=en">Google Scholar</a>.</p>
+    <p class="sub en">* equal contribution, † corresponding. Full list on <a href="https://scholar.google.com/citations?user=wwGGcd0AAAAJ&amp;hl=en">Google Scholar</a>.</p><p class="sub ko">* 공동 제1저자, † 교신저자. 전체 목록은 <a href="https://scholar.google.com/citations?user=wwGGcd0AAAAJ&amp;hl=en">Google Scholar</a>에서 볼 수 있습니다.</p>
     <h3 class="year">2026</h3>
     <ul class="pubs">
       <li class="pub"><div class="thumb"><video src="media/pubs/delta.mp4" poster="media/pubs/delta.jpg" muted loop playsinline preload="none" aria-hidden="true"></video></div><div class="pc"><p class="t">DeLTa: Demonstration and Language-Guided Novel Transparent Object Manipulation</p><p class="a">Taeyeop Lee*, Gyuree Kang*, Bowen Wen, Youngho Kim, Seunghyeok Back, In So Kweon, David Hyunchul Shim, Kuk-Jin Yoon</p><p class="v">Preprint, 2026</p><p class="lk"><a href="https://sites.google.com/view/DeLTa25/">Page</a><a href="https://arxiv.org/abs/2510.05662">Arxiv</a></p></div></li>
@@ -535,9 +583,9 @@ footer .ft-kist .kd{display:none}
     <div class="pi">
       <img class="photo" src="media/portrait.png" alt="Taeyeop Lee" width="600" height="600">
       <div>
-        <h3>Taeyeop Lee</h3>
-        <p class="role">Principal Investigator · Senior Researcher, AI Robot Institute, KIST · Ph.D., KAIST</p>
-        <p>Taeyeop is a Senior Researcher at the AI Robot Institute, KIST. He received his Ph.D. and M.S. from KAIST and his B.S. from Kwangwoon University. He has been fortunate to collaborate with <b class="co">NVIDIA Research</b>, <b class="co">Meta</b> and <b class="co">Adobe Research</b>, and is a recipient of the Presidential Award of Korea.</p>
+        <h3><span class="en">Taeyeop Lee</span><span class="ko">이태엽 Taeyeop Lee</span></h3>
+        <p class="role en">Principal Investigator · Senior Researcher, AI Robot Institute, KIST · Ph.D., KAIST</p><p class="role ko">Principal Investigator · KIST AI Robot Institute 선임연구원 · KAIST 박사</p>
+        <p class="en">Taeyeop is a Senior Researcher at the AI Robot Institute, KIST. He received his Ph.D. and M.S. from KAIST and his B.S. from Kwangwoon University. He has been fortunate to collaborate with <b class="co">NVIDIA Research</b>, <b class="co">Meta</b> and <b class="co">Adobe Research</b>, and is a recipient of the Presidential Award of Korea.</p><p class="ko">KIST AI Robot Institute 선임연구원입니다. KAIST에서 박사와 석사, 광운대학교에서 학사 학위를 받았습니다. <b class="co">NVIDIA Research</b>, <b class="co">Meta</b>, <b class="co">Adobe Research</b>와 공동연구를 했고, 대통령상을 받았습니다.</p>
         <div class="links">
           <a href="https://taeyeop.com">Homepage</a>
           <a href="https://scholar.google.com/citations?user=wwGGcd0AAAAJ&amp;hl=en">Google Scholar</a>
@@ -546,11 +594,11 @@ footer .ft-kist .kd{display:none}
         </div>
       </div>
     </div>
-    <h3 class="group" style="margin-top:36px">Founding members wanted</h3>
+    <h3 class="group" style="margin-top:36px"><span class="en">Founding members wanted</span><span class="ko">창립 멤버를 찾습니다</span></h3>
     <div class="openings">
-      <a class="slot" href="#join"><svg class="mascot" viewBox="56 30 160 160" aria-hidden="true"><use href="#m-wave"/></svg><div><b>M.S. and Ph.D. students</b>Build our first robots with us.</div></a>
-      <a class="slot" href="#join"><svg class="mascot" viewBox="56 30 160 160" aria-hidden="true"><use href="#m-hold"/></svg><div><b>Interns and undergraduates</b>Real robots from day one.</div></a>
-      <a class="slot" href="#join"><svg class="mascot" viewBox="56 30 160 160" aria-hidden="true"><use href="#m-walk"/></svg><div><b>Post-docs</b>Lead your own direction.</div></a>
+      <a class="slot" href="#join"><svg class="mascot" viewBox="56 30 160 160" aria-hidden="true"><use href="#m-wave"/></svg><div><b><span class="en">M.S. and Ph.D. students</span><span class="ko">M.S.·Ph.D. 학생</span></b><span class="en">Build our first robots with us.</span><span class="ko">첫 로봇을 함께 만듭니다.</span></div></a>
+      <a class="slot" href="#join"><svg class="mascot" viewBox="56 30 160 160" aria-hidden="true"><use href="#m-hold"/></svg><div><b><span class="en">Interns and undergraduates</span><span class="ko">인턴·학부생</span></b><span class="en">Real robots from day one.</span><span class="ko">첫날부터 실제 로봇으로.</span></div></a>
+      <a class="slot" href="#join"><svg class="mascot" viewBox="56 30 160 160" aria-hidden="true"><use href="#m-walk"/></svg><div><b>Post-docs</b><span class="en">Lead your own direction.</span><span class="ko">자신의 연구 방향을 이끕니다.</span></div></a>
     </div>
   </div>
 </section>
@@ -559,26 +607,26 @@ footer .ft-kist .kd{display:none}
   <div class="wrap">
     <h2>News</h2>
     <ul class="news">
-      <li><time>2026 · Oct</time><div>GROW Lab starts at the AI Robot Institute, KIST.</div></li>
-      <li><time>2026 · Sep</time><div>GeoNVS presented as an oral at ECCV 2026, Malmö.</div></li>
-      <li><time>2026 · Jul</time><div>GraspGraphNet, multi-embodiment dexterous grasp generation, released as a preprint.</div></li>
-      <li><time>2026 · Jun</time><div>GraspClutter6D (RA-L) presented at ICRA 2026.</div></li>
-      <li><time>2026 · Feb</time><div>Event6D accepted to CVPR 2026.</div></li>
+      <li><time><span class="en">2026 · Oct</span><span class="ko">2026.10</span></time><div><span class="en">GROW Lab starts at the AI Robot Institute, KIST.</span><span class="ko">GROW Lab이 KIST AI Robot Institute에서 시작합니다.</span></div></li>
+      <li><time><span class="en">2026 · Sep</span><span class="ko">2026.09</span></time><div><span class="en">GeoNVS presented as an oral at ECCV 2026, Malmö.</span><span class="ko">GeoNVS를 ECCV 2026(Malmö)에서 oral로 발표했습니다.</span></div></li>
+      <li><time><span class="en">2026 · Jul</span><span class="ko">2026.07</span></time><div><span class="en">GraspGraphNet, multi-embodiment dexterous grasp generation, released as a preprint.</span><span class="ko">Multi-embodiment dexterous grasp generation 연구 GraspGraphNet을 preprint로 공개했습니다.</span></div></li>
+      <li><time><span class="en">2026 · Jun</span><span class="ko">2026.06</span></time><div><span class="en">GraspClutter6D (RA-L) presented at ICRA 2026.</span><span class="ko">GraspClutter6D(RA-L)를 ICRA 2026에서 발표했습니다.</span></div></li>
+      <li><time><span class="en">2026 · Feb</span><span class="ko">2026.02</span></time><div><span class="en">Event6D accepted to CVPR 2026.</span><span class="ko">Event6D가 CVPR 2026에 accept되었습니다.</span></div></li>
     </ul>
   </div>
 </section>
 
 <section id="join">
   <div class="wrap">
-    <h2>Join us</h2>
+    <h2><span class="en">Join us</span><span class="ko">함께해요</span></h2>
     <div class="join" style="grid-template-columns:minmax(0,1fr)">
       <div>
-        <p class="join-lead">Do world-class robot AI with world-class collaborators.</p>
-        <p class="sub" style="margin:0 0 20px">We work with researchers at NVIDIA, Google, Meta and KAIST, and aim every project at the top venues in robotics and AI. Join us to bring VLA models, robot learning, dexterous hands and humanoids into the real world.</p>
-        <div style="display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px;margin:0"><a class="btn primary" href="https://docs.google.com/forms/d/e/1FAIpQLSfC3J0BajbiUOpGvrmgzT6Xlwu3vpd6-GV_u-TTq-aX-EIVDA/viewform">Apply form</a><span class="apply-note">then send an email to <span class="mail" id="mail">taeyeop.trevor@gmail.com</span><button class="copy" id="copybtn" type="button">Copy</button> to let us know you applied.</span></div>
+        <p class="join-lead en">Do world-class robot AI with world-class collaborators.</p><p class="join-lead ko">세계적인 연구자들과 함께, 세계적인 robot AI 연구를 합니다.</p>
+        <p class="sub en" style="margin:0 0 20px">We work with researchers at NVIDIA, Google, Meta and KAIST, and aim every project at the top venues in robotics and AI. Join us to bring VLA models, robot learning, dexterous hands and humanoids into the real world.</p><p class="sub ko" style="margin:0 0 20px">NVIDIA, Google, Meta, KAIST 연구자들과 함께 연구하고, 모든 프로젝트를 robotics와 AI의 top venue에 맞춰 진행합니다. VLA model, robot learning, dexterous hand, humanoid를 real world로 함께 가져갈 분을 찾습니다.</p>
+        <div style="display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px;margin:0"><a class="btn primary en" href="https://docs.google.com/forms/d/e/1FAIpQLSfC3J0BajbiUOpGvrmgzT6Xlwu3vpd6-GV_u-TTq-aX-EIVDA/viewform">Apply form</a><a class="btn primary ko" href="https://docs.google.com/forms/d/e/1FAIpQLSeYR6mN5_M1XZ43hMRtwsyIiSvn6ppVkoTe7OOl4pTJxJ_7IA/viewform">지원서 작성</a><span class="apply-note"><span class="en">then send an email to</span><span class="ko">작성 후</span> <span class="mail" id="mail">taeyeop.trevor@gmail.com</span><button class="copy" id="copybtn" type="button">Copy</button> <span class="en">to let us know you applied.</span><span class="ko">로 지원했다고 메일을 보내주세요.</span></span></div>
         <div class="kist-calls">
-          <b>KIST official calls</b>
-          <p><a href="https://kist.re.kr/ko/notice/recruiting-students.do">Student recruiting notices</a> <span>(M.S./Ph.D., Jan. &amp; Aug.)</span> · <a href="https://kist.re.kr/ko/notice/employment-announcement.do">Employment announcements</a> <span>(interns, post-docs)</span></p>
+          <b><span class="en">KIST official calls</span><span class="ko">KIST 공식 공고</span></b>
+          <p><a href="https://kist.re.kr/ko/notice/recruiting-students.do"><span class="en">Student recruiting notices</span><span class="ko">학생 모집 공고</span></a> <span><span class="en">(M.S./Ph.D., Jan. &amp; Aug.)</span><span class="ko">(M.S./Ph.D., 1월·8월)</span></span> · <a href="https://kist.re.kr/ko/notice/employment-announcement.do"><span class="en">Employment announcements</span><span class="ko">채용 공고</span></a> <span><span class="en">(interns, post-docs)</span><span class="ko">(인턴, post-doc)</span></span></p>
         </div>
       </div>
     </div>
@@ -587,11 +635,11 @@ footer .ft-kist .kd{display:none}
 
 <section id="collab" class="collab-strip">
   <div class="wrap">
-    <div class="eyebrow">Collaborations</div>
-    <p class="sub" style="margin-bottom:22px">Institutions we have worked and published with.</p>
+    <div class="eyebrow"><span class="en">Collaborations</span><span class="ko">공동연구</span></div>
+    <p class="sub en" style="margin-bottom:22px">Institutions we have worked and published with.</p><p class="sub ko" style="margin-bottom:22px">함께 연구하고 논문을 쓴 기관들입니다.</p>
     <div class="logos">
-      <div class="row"><span class="k">Industry</span><span class="lg nv">NVIDIA</span><span class="lg goog"><i style="color:#4285F4">G</i><i style="color:#EA4335">o</i><i style="color:#FBBC05">o</i><i style="color:#4285F4">g</i><i style="color:#34A853">l</i><i style="color:#EA4335">e</i></span><span class="lg meta">Meta</span><span class="lg adobe">Adobe</span><span class="lg naver">NAVER <span>LABS</span></span><span class="lg krafton">KRAFTON</span></div>
-      <div class="row"><span class="k">Academia</span><span class="lg cmu">Carnegie Mellon <span>University</span></span><span class="lg kaist">KAIST</span><span class="lg tum">TUM</span><span class="lg gist">GIST</span><span class="lg kimm">KIMM</span></div>
+      <div class="row"><span class="k"><span class="en">Industry</span><span class="ko">기업</span></span><span class="lg nv">NVIDIA</span><span class="lg goog"><i style="color:#4285F4">G</i><i style="color:#EA4335">o</i><i style="color:#FBBC05">o</i><i style="color:#4285F4">g</i><i style="color:#34A853">l</i><i style="color:#EA4335">e</i></span><span class="lg meta">Meta</span><span class="lg adobe">Adobe</span><span class="lg naver">NAVER <span>LABS</span></span><span class="lg krafton">KRAFTON</span></div>
+      <div class="row"><span class="k"><span class="en">Academia</span><span class="ko">대학·연구소</span></span><span class="lg cmu">Carnegie Mellon <span>University</span></span><span class="lg kaist">KAIST</span><span class="lg tum">TUM</span><span class="lg gist">GIST</span><span class="lg kimm">KIMM</span></div>
     </div>
   </div>
 </section>
@@ -607,6 +655,12 @@ footer .ft-kist .kd{display:none}
 </footer>
 
 <script>
+(function(){
+  var d=document.documentElement,b=document.querySelectorAll('.langsw button');
+  function set(l){d.lang=l;b.forEach(function(x){x.setAttribute('aria-pressed',x.dataset.l===l?'true':'false')});try{localStorage.setItem('grow-lang',l)}catch(e){}}
+  set(d.lang==='ko'?'ko':'en');
+  b.forEach(function(x){x.addEventListener('click',function(){set(x.dataset.l)})});
+})();
 (function(){
   var vids=document.querySelectorAll('.demo video, .pub .thumb video');
   vids.forEach(function(v){var r=parseFloat(v.dataset.rate);if(!r)return;function set(){v.defaultPlaybackRate=r;v.playbackRate=r}set();v.addEventListener('loadedmetadata',set);v.addEventListener('play',set)});
